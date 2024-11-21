@@ -24,7 +24,11 @@ function App() {
           <p>Loading... ({loadingPercentage}%)</p>
         </div>
       )}
-      <Unity className="unity" unityProvider={unityProvider} />
+      <Unity
+        className="unity"
+        unityProvider={unityProvider}
+        devicePixelRatio={window.devicePixelRatio}
+      />
     </div>
   );
 }
