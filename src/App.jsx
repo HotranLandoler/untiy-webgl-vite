@@ -21,7 +21,15 @@ function App() {
         // We'll conditionally render the loading overlay if the Unity
         // Application is not loaded.
         <div className="loading-overlay">
-          <p>Loading... ({loadingPercentage}%)</p>
+          <div>
+            <p className="loading-text">加载中...</p>
+            <div
+              className="progress"
+              style={{ ["--progress"]: loadingPercentage }}
+            >
+              <p>{loadingPercentage}%</p>
+            </div>
+          </div>
         </div>
       )}
       <Unity
