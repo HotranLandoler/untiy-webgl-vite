@@ -21,11 +21,58 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: grey;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #b4654c;
+
+  background: #faf0e1;
   /* We'll set the following Flex properties in order to center the text. */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.loading-text {
+  margin-bottom: 1rem;
+}
+
+.progress {
+  position: relative;
+  height: 3rem;
+  width: 16rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #fe809f;
+  border-radius: 99px;
+}
+
+.progress::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: calc(var(--progress) * 1%);
+
+  background-color: #fee78f;
+  border-radius: 99px;
+
+  transition: all 0.2s;
+}
+
+.progress p {
+  --outline: 2px;
+  text-shadow: var(--outline) var(--outline) 0 #fff,
+    calc(-1 * var(--outline)) calc(-1 * var(--outline)) 0 #fff,
+    var(--outline) calc(-1 * var(--outline)) 0 #fff,
+    calc(-1 * var(--outline)) var(--outline) 0 #fff,
+    var(--outline) var(--outline) 0 #fff;
+  z-index: 1;
 }
 
 .container > .unity {
