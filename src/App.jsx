@@ -9,6 +9,9 @@ function App() {
     frameworkUrl: "Build/WebGL.framework.js.unityweb",
     codeUrl: "Build/WebGL.wasm.unityweb",
     streamingAssetsUrl: "StreamingAssets",
+    companyName: "Megrez",
+    productName: "UI",
+    productVersion: "1.0.0",
   });
 
   // We'll round the loading progression to a whole number to represent the
